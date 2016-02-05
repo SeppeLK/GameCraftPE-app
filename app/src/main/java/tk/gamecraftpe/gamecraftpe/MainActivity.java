@@ -3,7 +3,6 @@ package tk.gamecraftpe.gamecraftpe;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -27,8 +26,11 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "I just played at a very nice server please try it! GameCraft PE a server for Minecraft PE. How to join: Ip: gamecraftpe.tk Port: 19132 Play now!");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
             }
         });
 
