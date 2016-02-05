@@ -1,13 +1,10 @@
 package tk.gamecraftpe.gamecraftpe;
 
-import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
-import android.view.Menu;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
