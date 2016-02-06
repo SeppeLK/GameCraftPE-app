@@ -1,6 +1,8 @@
 package tk.gamecraftpe.gamecraftpe;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
@@ -60,22 +62,32 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.vote) {
             i = new Intent(MainActivity.this, Vote.class);
             startActivity(i);
             finish();
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.website) {
             i = new Intent(MainActivity.this, Website.class);
             startActivity(i);
             finish();
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.staff) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.vip) {
 
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        } else if (id == R.id.facebook) {
+            Uri uri = Uri.parse("https://www.facebook.com/gamecraftpe");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        } else if (id == R.id.github) {
+            Uri uri = Uri.parse("https://github.com/GameCraftPE");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        } else if (id == R.id.share) {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "I just played at a very nice server please try it! GameCraft PE a server for Minecraft PE. How to join: Ip: gamecraftpe.tk Port: 19132 Play now!");
+            sendIntent.setType("text/plain");
+            startActivity(sendIntent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
