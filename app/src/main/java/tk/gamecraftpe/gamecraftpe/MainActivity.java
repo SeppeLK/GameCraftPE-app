@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
-                sendIntent.putExtra(Intent.EXTRA_TEXT, "I just played at a very nice server please try it! GameCraft PE a server for Minecraft PE. How to join: Ip: gamecraftpe.tk Port: 19132 Play now!");
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "I've just played on a very nice server. Please try it! GameCraft PE a server for Minecraft PE. How to join: Ip: gamecraftpe.tk Port: 19132 Play now!");
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
             }
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.share) {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "I just played at a very nice server please try it! GameCraft PE a server for Minecraft PE. How to join: Ip: gamecraftpe.tk Port: 19132 Play now!");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "I've just played on a very nice server. Please try it! GameCraft PE a server for Minecraft PE. How to join: Ip: gamecraftpe.tk Port: 19132 Play now!");
             sendIntent.setType("text/plain");
             startActivity(sendIntent);
         }
